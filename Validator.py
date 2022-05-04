@@ -12,6 +12,10 @@ class Validator:
         func = func.replace(" ", "")
         func = func.replace("X", 'x')
         func = func.replace("^", "**")
+        func = func.replace("cos", "np.cos")
+        func = func.replace("sin", "np.sin")
+        func = func.replace("tan", "np.tan")
+
         x = np.linspace(-5, 5, 100)
         try:
             y = eval(func)
