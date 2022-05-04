@@ -16,6 +16,7 @@ class GUI:
         self.plotButton(root)
         root.mainloop()
 
+    # Function responsible for building the frame of the function
     def functionLabelFrame(self, root):
         lfFunction = LabelFrame(root, text=' Enter a Valid Function', font="Helvetica 20 italic",padx=10)
         lfFunction.place(x=50, y=70)
@@ -25,6 +26,7 @@ class GUI:
         entryFunction.pack(side=LEFT, pady=20, padx=10)
         return entryFunction
 
+    # Function responsible for building the frame of the range
     def rangeLabelFrame(self, root):
         lfRange = LabelFrame(root, text=' Enter a Valid Range', font="Helvetica 20 italic",padx=10)
         lfRange.place(x=50, y=222)
@@ -39,14 +41,17 @@ class GUI:
         entryMax.pack(side=LEFT, pady=20, padx=5)
         return entryMin, entryMax
 
+    # Function responsible for building the plot button
     def plotButton(self, root):
         button = Button(root, text="Plot", command=self.getInputsAndPlot,bg="#DADADA",width=10, font="Helvetica 20")
         button.place(x=320, y=400)
 
+    # Utility Function responsible for taking the input fields and plot the figure
     def getInputsAndPlot(self):
         plotObj = Plot(self.minVal.get(), self.maxVal.get(), self.fx.get())
         plotObj.plot()
 
+    # Function responsible for building the tips part
     def tipsScreen(self, root):
         lfTips = LabelFrame(root, text='Some tips', font="Helvetica 20 italic",pady=20)
         lfTips.place(x=450, y=70)

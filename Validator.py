@@ -5,13 +5,13 @@ class Validator:
 
     def validateFunction(self, func):
         y = 0
-        if (func == ""):
+        if func == "":
             return y, False, "Enter a function"
         if "**" in func:
-            return y, False,"Invalid Function, Enter a valid function"
+            return y, False, "Invalid Function, Enter a valid function"
         try:
-            z = int(func)
-            return y, False,"Invalid Function, Enter a valid function"
+            z = int(func)  # if the user entered a number
+            return y, False, "Invalid Function, Enter a valid function"
         except:
             func = func.replace(" ", "")
             func = func.replace("X", 'x')
@@ -29,7 +29,7 @@ class Validator:
 
     def validateInputRange(self, minValue, maxValue):
         if minValue == "" or maxValue == "":
-            return False, "You must enter a minimum value and maximum value for X"
+            return False, "You must enter a minimum and maximum values for X"
 
         try:
             minValue = float(eval(minValue))
@@ -37,6 +37,6 @@ class Validator:
         except:
             return False, "Invalid input range! Enter a valid input range"
 
-        if (float(eval(str(minValue))) >= float(eval(str(maxValue)))):
+        if float(eval(str(minValue))) >= float(eval(str(maxValue))):
             return False, "Invalid input range! minimum value must be smaller than maximum value"
         return True, ""
