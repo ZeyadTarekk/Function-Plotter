@@ -45,5 +45,5 @@ class Plot:
                 )
                 return
             else:
-                x = np.linspace(float(self.minValue), float(self.maxValue), 100)
+                x = np.linspace(float(eval(self.minValue)), float(eval(self.maxValue)), 100)
                 self.finalPlot(x, y)

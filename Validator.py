@@ -28,11 +28,11 @@ class Validator:
             return False, "You must enter a minimum value and maximum value for X"
 
         try:
-            minValue = float(minValue)
-            maxValue = float(maxValue)
+            minValue = float(eval(minValue))
+            maxValue = float(eval(maxValue))
         except:
             return False, "Invalid input range! Enter a valid input range"
 
-        if (float(minValue) >= float(maxValue)):
+        if (float(eval(str(minValue))) >= float(eval(str(maxValue)))):
             return False, "Invalid input range! minimum value must be smaller than maximum value"
         return True, ""
