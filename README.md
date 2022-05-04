@@ -66,6 +66,11 @@ $ cd Function-Plotter
 ```sh
 python main.py
 ```
+1. **_Running tests_**
+
+```sh
+python test.py
+```
 
 ## 💻 Built Using <a name = "tech"></a>
 
