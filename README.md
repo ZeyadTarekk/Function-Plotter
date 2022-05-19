@@ -25,6 +25,7 @@
 - [Technology](#tech)
 - [Screenshots](#Screenshots)
 - [Contributors](#Contributors)
+- [License](#license)
 
 ## 📙 About <a name = "about"></a>
 
@@ -108,3 +109,7 @@ python test.py
     
   </tr>
  </table>
+
+ ## License <a name = "license"></a>
+
+> This software is licensed under MIT License, See [License](https://github.com/ZeyadTarekk/Function-Plotter/blob/main/LICENSE) for more information ©ZeyadTarekk.
